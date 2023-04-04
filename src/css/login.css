@@ -1,0 +1,25 @@
+.body {
+    margin: 0px;
+}
+.container {
+    margin: 0px;
+}
+.row {
+    margin: 0px;
+    padding: 0px;
+}
+#login_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login_box {
+    margin: 10% 20%;
+    padding: 10% 5%;
+    height: 75%;
+    width: 50%;
+    border-radius: 3%;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
