@@ -12,6 +12,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('https://img.freepik.com/free-photo/plate-table_1112-195.jpg?w=1060&t=st=1680583473~exp=1680584073~hmac=cc92c6cfff22e5139b374d54fa72623a5b7c25eea652ce1d7e790b242256a964');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #login_box {
@@ -20,6 +23,30 @@
     height: 75%;
     width: 50%;
     border-radius: 3%;
-    background-color: aliceblue;
+    background-color:#faf7fc;
     box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+#submit_btn {
+    background-color: #4d29a7;
+    color: azure;
+}
+
+#image_div {
+    background: linear-gradient(135deg, hsla(252, 47%, 51%, 1) 0%, hsla(270, 63%, 74%, 1) 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#image_div div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+#img_main {
+    width: 60%;
+    display: block;  
+    margin: auto;  
 }

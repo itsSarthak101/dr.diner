@@ -6,10 +6,10 @@ export default function Login() {
     <section className="">
         <div className="container-fluid px-0">
             <div className="row g-0">
-                <div className="col-lg-7 vh-100 bg-secondary" id="login_div">
+                <div className="col-lg-8 vh-100" id="login_div">
                     <div id="login_box">
                         <form>
-                            <h3>Sign In</h3>
+                            <h2 style={{color: '#4d29a7'}}>Sign In</h2>
                             <div className="mb-3">
                                 <label>Email address</label>
                                 <input type="email" className="form-control" placeholder="Enter email"/>
@@ -25,14 +25,16 @@ export default function Login() {
                                 </div>
                             </div>
                             <div className="d-grid">
-                                <button type="submit" className="btn btn-primary">Submit</button>
+                                <button type="submit" className="btn" id='submit_btn'>Submit</button>
                             </div>
-                            <p className="forgot-password text-right">Forgot <a href="#">password?</a></p>
+                            <p className="forgot-password text-right"><a href="#" style={{textDecoration: 'none'}}>Forgot password?</a></p>
                         </form>
                     </div>
                 </div>
-                <div className="col-lg-5 vh-100 bg-primary">
-                    <img src="assets/img/login/top-view-bowl-with-lentils-variety-condiments.jpg" style={{ width: '100%', height: '100%'}} alt="" />
+                <div className="col-lg-4 vh-100 bg-primary" id='image_div'>
+                    <div>
+                        <img src="assets/img/logo/logo_abstract.png" id='img_main' alt="" />
+                    </div>
                 </div>
             </div>
         </div>

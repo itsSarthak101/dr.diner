@@ -9,7 +9,7 @@ export default function Signup() {
                 <div className="col-lg-8 vh-100" id='signup_div'>
                     <div id='signup_box'>
                         <form>
-                            <h3>Sign Up</h3>
+                            <h2 style={{color: '#4d29a7'}}>Sign Up</h2>
                             <div className="mb-3">
                                 <label>First name</label>
                                 <input type="text" className="form-control" placeholder="First name"/>
@@ -27,7 +27,7 @@ export default function Signup() {
                                 <input type="password" className="form-control" placeholder="Enter password"/>
                             </div>
                             <div className="d-grid">
-                                <button type="submit" className="btn btn-primary">Sign Up</button>
+                                <button type="submit" className="btn btn-primary" id='submit_btn'>Sign Up</button>
                             </div>
                             <p className="forgot-password text-right">
                                 Already registered <a href="/sign-in">sign in?</a>
@@ -35,8 +35,10 @@ export default function Signup() {
                         </form>
                     </div>
                 </div>
-                <div className="col-lg-4 vh-100 bg-primary">
-                    <img src="assets/img/login/top-view-bowl-with-lentils-variety-condiments.jpg" style={{ width: '100%', height: '100%'}} alt="" />
+                <div className="col-lg-4 vh-100" id='image_div'>
+                    <div>
+                        <img src="assets/img/logo/logo_abstract.png" id='img_main' alt="" />
+                    </div>
                 </div>
             </div>
         </div>

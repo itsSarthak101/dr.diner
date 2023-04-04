@@ -12,6 +12,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('https://img.freepik.com/free-photo/top-half-view-cake-with-pastry-cream-plate-purple-shawl_140725-99769.jpg?w=1060&t=st=1680585352~exp=1680585952~hmac=ba9c48a0deae32079a3552ac74f4dc14799083dc710630f5c0b04e1c5b7f869b');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #signup_box {
@@ -22,4 +25,28 @@
     border-radius: 3%;
     background-color: aliceblue;
     box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+#submit_btn {
+    background-color: #4d29a7;
+    color: azure;
+}
+
+
+#image_div {
+    background: linear-gradient(315deg, hsla(252, 47%, 51%, 1) 0%, hsla(270, 63%, 74%, 1) 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#image_div div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+#img_main {
+    width: 60%;
+    display: block;  
+    margin: auto;  
 }

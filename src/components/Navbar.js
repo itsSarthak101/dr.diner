@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className="col-lg-12">
         <nav className="navbar navbar-expand-lg">
           <a className="navbar-brand" href="#">
-            <img src="assets/img/logo/logo4.svg" alt="Logo" />
+            <img src="assets/img/logo/logo_12.png" alt="Logo" />
           </a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="toggler-icon"></span>
