@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-// import Footer from '../components/Footer'
+import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 // import Loading from '../components/Loading'
 
 export default function Home() {
@@ -16,11 +17,11 @@ export default function Home() {
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="hero-content">
-                  <h1 className="wow fadeInUp" data-wow-delay=".2s"><span style={{color: '#4d29a7', fontWeight: 'bold'}}>DOCTOR DINER </span><span>For all your Hunger Problems</span></h1>
+                  <h1 className="wow fadeInUp" data-wow-delay=".2s"><span id="main-heros" style={{color: '#4d29a7', fontWeight: 'bold'}}>DOCTOR DINER </span><span>For all your Hunger Problems</span></h1>
                   <p className="wow fadeInUp" data-wow-delay=".4s">
                   Order food for your favrourite restaurants in just some few easy clicks right from the comfort of your home!
                   </p>
-                  <a href="#" className="main-btn btn-hover wow fadeInUp" data-wow-delay=".6s" style={{textDecoration: 'none'}}>Sign In</a>
+                  <Link to="/login" className="main-btn btn-hover wow fadeInUp" data-wow-delay=".6s" style={{textDecoration: 'none'}}>Sign In</Link>
                 </div>
               </div>
               <div className="col-lg-6">
@@ -31,7 +32,7 @@ export default function Home() {
           </div>
           </div>
         </section>
-        {/* <div> <Footer></Footer> </div> */}
+        <div> <Footer></Footer> </div>
       </div>
   )
 }

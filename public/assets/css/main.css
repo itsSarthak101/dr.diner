@@ -309,7 +309,7 @@ p {
   width: 200%;
   height: 100%;
   border-style: solid;
-  border-color: rgba(140, 85, 241, 0.45) rgba(140, 85, 241, 0.45) #ddd;
+  border-color: #4d29a7 #4d29a7 rgba(140, 85, 241, 0.45);
   border-radius: 50%;
   border-width: 6px
 }
@@ -317,14 +317,14 @@ p {
 .preloader .loader .ytp-spinner-left .ytp-spinner-circle {
   left: 0;
   right: -100%;
-  border-right-color: #ddd;
+  border-right-color: rgba(140, 85, 241, 0.45);
   animation: ytp-spinner-left-spin 1333ms cubic-bezier(.4, 0, .2, 1) infinite both
 }
 
 .preloader .loader .ytp-spinner-right .ytp-spinner-circle {
   left: -100%;
   right: 0;
-  border-left-color: #ddd;
+  border-left-color: rgba(140, 85, 241, 0.45);
   animation: ytp-right-spin 1333ms cubic-bezier(.4, 0, .2, 1) infinite both
 }
 
@@ -1493,6 +1493,12 @@ p {
   .hero-section {
     padding-top: 160px
   }
+}
+
+#main-heros {
+  background: linear-gradient(90deg, #3c2083 0%, #4d29a7 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 @media only screen and (min-width:768px) and (max-width:991px) {

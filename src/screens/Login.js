@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/login.css';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   return (
@@ -25,9 +26,9 @@ export default function Login() {
                                 </div>
                             </div>
                             <div className="d-grid">
-                                <button type="submit" className="btn" id='submit_btn'>Submit</button>
+                                <Link type="submit" className="btn" id='submit_btn' to="/main">Submit</Link>
                             </div>
-                            <p className="forgot-password text-right"><a href="#" style={{textDecoration: 'none'}}>Forgot password?</a></p>
+                            <p className="forgot-password text-right"><Link to="/" style={{textDecoration: 'none'}}>Forgot password?</Link></p>
                         </form>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/signup.css';
+import { Link } from 'react-router-dom';
 
 export default function Signup() {
   return (
@@ -27,10 +28,10 @@ export default function Signup() {
                                 <input type="password" className="form-control" placeholder="Enter password"/>
                             </div>
                             <div className="d-grid">
-                                <button type="submit" className="btn btn-primary" id='submit_btn'>Sign Up</button>
+                                <Link to="/login" type="submit" className="btn btn-primary" id='submit_btn'>Sign Up</Link>
                             </div>
                             <p className="forgot-password text-right">
-                                Already registered <a href="/sign-in">sign in?</a>
+                                Already registered <Link to="/login">sign in?</Link>
                             </p>
                         </form>
                     </div>
