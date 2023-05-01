@@ -29,7 +29,7 @@ export default function Navbar() {
                 <Link className="page-scroll" to="#about" style={{textDecoration: 'none'}}>About</Link>
               </li>
               <li className="nav-item">
-                <Link className="page-scroll" to="#how" style={{textDecoration: 'none'}}>Food Trivia</Link>
+                <Link className="page-scroll" to="/trivia" style={{textDecoration: 'none'}}>Food Trivia</Link>
               </li>
               <li className="nav-item">
                 <Link to="/signup" className="main-btn btn-hover wow fadeInUp" data-wow-delay=".6s" style={{color: 'white', padding: '10px', textDecoration: 'none'}}>Sign Up</Link>

@@ -1,7 +1,16 @@
-const http = require('http')
-const app = require('./app')
+const express = require('express')
+const app = express()
+const port = 5000
+const mongoDB = require('./app')
+mongoDB();
 
-const PORT = process.env.PORT || 5001
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+app.use(express.json())
+app.use('/users', require('./routes/createUser'))
 
-const server = http.createServer(app)
-server.listen(PORT)
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
