@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 })
 app.use(express.json())
 app.use('/users', require('./routes/createUser'))
+app.use('/users', require('./routes/DisplayData'))
 
 
 app.listen(port, () => {
