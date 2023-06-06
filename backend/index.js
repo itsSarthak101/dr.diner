@@ -21,5 +21,5 @@ app.use('/users', require('./routes/DisplayData'))
 
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Dr.Diner listening on port ${port}`)
 })

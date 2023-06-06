@@ -32,6 +32,11 @@
     color: azure;
 }
 
+#submit_btn:hover {
+    background-color: hsla(252, 47%, 51%, 1);
+    color: azure;
+}
+
 #image_div {
     background: linear-gradient(135deg, hsla(252, 47%, 51%, 1) 0%, hsla(270, 63%, 74%, 1) 100%);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;

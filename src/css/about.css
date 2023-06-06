@@ -1,0 +1,14 @@
+.about_card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.contact_btn {
+    width:100%;
+    background-color: #4d29a7 !important;
+    color: azure !important;
+}
+
+.contact_btn:hover {
+    background-color: hsla(252, 47%, 51%, 1) !important;
+    color: azure;
+}

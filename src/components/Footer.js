@@ -11,10 +11,9 @@ export default function Footer() {
 
         <ul className="nav col-md-4 justify-content-end" style={{color: '#4d29a7'}}>
           <li className="nav-item"><Link to="/" className="nav-link px-2" style={{color: '#4d29a7'}}>Home</Link></li>
-          <li className="nav-item"><Link to="#" className="nav-link px-2" style={{color: '#4d29a7'}}>Features</Link></li>
-          <li className="nav-item"><Link to="#" className="nav-link px-2" style={{color: '#4d29a7'}}>Dinings</Link></li>
-          <li className="nav-item"><Link to="#" className="nav-link px-2" style={{color: '#4d29a7'}}>FAQs</Link></li>
-          <li className="nav-item"><Link to="#" className="nav-link px-2" style={{color: '#4d29a7'}}>About</Link></li>
+          <li className="nav-item"><Link to="#about" className="nav-link px-2" style={{color: '#4d29a7'}}>About</Link></li>
+          <li className="nav-item"><Link to="/trivia" className="nav-link px-2" style={{color: '#4d29a7'}}>Trivia</Link></li>
+          <li className="nav-item"><Link to="#Socials" className="nav-link px-2" style={{color: '#4d29a7'}}>Socials</Link></li>
         </ul>
       </footer>
     </div>
