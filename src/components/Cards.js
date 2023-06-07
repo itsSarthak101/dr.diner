@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatchCart, useCart } from './ContextReducer';
+import { useDispatchCart, useCart } from '../components/ContextReducer';
 import { useState } from 'react';
 import { useRef } from 'react';
 
@@ -24,21 +24,49 @@ export default function Cards(props) {
   let options = props.options;
   let priceOptions = options ? Object.keys(options) : [];
 
+
   const [qty, setQty] = useState(1);
   const [size, setSize] = useState('');
 
   const handleAddToCart = async () => {
     setQty(count)
+    let food = []
+    for (const item of data) {
+      if (item.id === props.foodItem._id) {
+        food = item
+        break;
+      }
+    }
+    if (food !== []) {
+      if (food.size === size) {
+        await dispatch({ type: "UPDATE", id: props.foodItem._id, price: finalPrice, qty: count })
+        return
+      }
+      else if (food.size !== size) {
+        await dispatch({
+          type: 'ADD',
+          id: props.foodItem._id,
+          name: props.foodItem.name,
+          img: props.foodItem.img,
+          price: finalPrice,
+          qty: count,
+          size: size,
+        });
+        return
+      }
+      return
+    }
     await dispatch({
       type: 'ADD',
       id: props.foodItem._id,
       name: props.foodItem.name,
+      img: props.foodItem.img,
       price: finalPrice,
       qty: count,
       size: size,
     });
-    console.log(data);
-  };
+    // console.log(data);
+  }
 
   const priceRef = useRef();
   let finalPrice = 0;

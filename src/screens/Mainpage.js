@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { useDispatchCart, useCart } from '../components/ContextReducer';
 import Badge from 'react-bootstrap/Badge'
 import Footer from '../components/Footer'
 // import CircularFoodGrid from '../components/CircularFoodGrid'
 import '../css/PlusMinusButton.css'
 import Cards from '../components/Cards'
+import Modal from '../Modal'
+import Cart from '../screens/Cart'
 
 export default function Mainpage() {
   const [search, setSearch] = useState('')
@@ -35,6 +38,9 @@ export default function Mainpage() {
     localStorage.removeItem("authToken")
     navigate("/login")
   }
+
+  const [cartView, setCartView] = useState(false)
+  let data = useCart();
 
   return (
     <div>
@@ -73,7 +79,7 @@ export default function Mainpage() {
 
                         {(localStorage.getItem("authToken")) ?
                           <li className="nav-item">
-                            <Link className="page-scroll" to="#home" style={{ textDecoration: 'none' }}>My Orders</Link>
+                            <Link className="page-scroll" to="/myorders" style={{ textDecoration: 'none' }}>My Orders</Link>
                           </li>
                           : ""}
 
@@ -90,7 +96,8 @@ export default function Mainpage() {
                           :
                           <div className='d-flex'>
                             <li className="nav-item">
-                              <Link className="page-scroll" to="#about" style={{ textDecoration: 'none' }}>My Cart{" "}<Badge pill bg="primary">2</Badge> </Link>
+                              <Link className="page-scroll" onClick={() => {setCartView(true)}} style={{ textDecoration: 'none' }}>My Cart{" "}<Badge pill bg="danger">{data.length}</Badge></Link>
+                              {cartView? <Modal onClose={() => {setCartView(false)}}><Cart></Cart></Modal> : null}
                             </li>
                             <li className="nav-item">
                               <Link to="/" className="main-btn btn-hover wow fadeInUp" onClick={handleLogout} data-wow-delay=".6s" style={{ color: 'white', padding: '10px', textDecoration: 'none' }}>Logout</Link>

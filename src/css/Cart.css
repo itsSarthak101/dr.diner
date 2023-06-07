@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
+.Empty_cart_header {
+    color: #4d29a7; 
+    font-weight: bold;
+    background: linear-gradient(90deg, #3c2083 0%, #4d29a7 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#ready_to_checkout {
+    color: #4d29a7; 
+    font-weight: bold;
+    background: linear-gradient(90deg, #3c2083 0%, #4d29a7 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#pay-button {
+    color: #fff;
+    background-color: #4d29a7 !important;
+}
+
+.trash {
+    font-size: 22px;
+    cursor: pointer;
+}
+.trash:hover {
+    color: black !important;
+}
+
+#pay-button:hover {
+    color: #fff;
+    background-color: #6546b4 !important;
+    cursor: pointer;
+}
+
+#pay-button:focus {
+    color: #fff;
+    box-shadow: none;
+}
+
+.apply:hover {
+    color: #fff;
+    background-color: #4d29a7 !important;
+}
+
+.size-quantity {
+    color: #4d29a7;
+    font-size: 15px;
+}
+
+#price {
+    color: #4d29a7;
+    font-size: 25px;
+}
