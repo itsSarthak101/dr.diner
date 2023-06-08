@@ -1,0 +1,5 @@
+.your_orders {
+    background: linear-gradient(90deg, #3c2083 0%, #4d29a7 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { useEffect, useState } from 'react'
+import '../css/myOrders.css';
 
 export default function MyOrders() {
     const navigate = useNavigate()
@@ -15,8 +16,6 @@ export default function MyOrders() {
     const fetchMyOrder = async () => {
         console.log(localStorage.getItem('userEmail'))
         await fetch("http://localhost:5000/users/myorderData", {
-            // credentials: 'include',
-            // Origin:"http://localhost:3000/login",
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -93,7 +92,7 @@ export default function MyOrders() {
                     </header>
                 </div>
             </div>
-            <div className='h4 ml-5' style={{color: '#4d29a7', fontWeight: 'bold', marginTop: '150px', fontSize: '50px'}}>
+            <div className='h4 ml-5 your_orders' style={{color: '#4d29a7', fontWeight: 'bold', marginTop: '150px', fontSize: '50px'}}>
                 Your Orders!
             </div>
             {/* Fetched Order Data */}

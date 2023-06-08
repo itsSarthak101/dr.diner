@@ -6,6 +6,8 @@
     background: linear-gradient(90deg, #3c2083 0%, #4d29a7 100%);
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-top: 20%;
 }
 
 #ready_to_checkout {

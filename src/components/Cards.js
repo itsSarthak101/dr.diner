@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatchCart, useCart } from '../components/ContextReducer';
 import { useState } from 'react';
 import { useRef } from 'react';
+import '../css/Cards.css';
 
 export default function Cards(props) {
   const [count, setCount] = useState(1);
@@ -82,12 +83,12 @@ export default function Cards(props) {
   }, [priceRef.current]);
 
   return (
-    <div>
+    <div id='cardContainer'>
       <div
-        className="card mt-3"
+        className="card mt-4"
         style={{
           width: '18rem',
-          maxHeight: '360px',
+          maxHeight: '460px',
           boxShadow:
             'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px',
         }}
@@ -100,13 +101,14 @@ export default function Cards(props) {
         />
 
         <div className="card-body">
-          <h5 id="heading" className="card-title">
+          <h5 id="heading" className="card-title text-center">
             {props.foodItem.name}
           </h5>
           {/* <p className="card-text">{props.discription}</p> */}
 
           <div className="container w-100">
-            <div className="qty mt-4">
+            {/* Quantity Counter */}
+            <div className="qty mt-3 mb-3">
               <span className="minus bg-dark" onClick={handleDecrement}>
                 -
               </span>
@@ -119,22 +121,23 @@ export default function Cards(props) {
               />
               <span className="plus bg-dark" onClick={handleIncrement}>+</span>
             </div>
-
-            <div>
-              <select className="m-2 h-100 bg-primary rounded" onChange={(e) => setSize(e.target.value)} ref={priceRef}>
-                {priceOptions.map((data) => {
-                  return (
-                    <option key={data} value={data}>{data}
-                    </option>
-                  );
-                })}
-              </select>
+            {/* Size Selector */}
+            <div className='select-dropdown'>
+                <select id='sizeSelect' className="h-100 mb-2 rounded custom-select text-capitalize" onChange={(e) => setSize(e.target.value)} ref={priceRef}>
+                  {priceOptions.map((data) => {
+                    return (
+                      <option className='text-capitalize' key={data} value={data}>{data}
+                      </option>
+                    );
+                  })}
+                </select>
+              <div className="d-inline h-100" id='finalPrice'>₹{finalPrice}/-</div>
             </div>
 
 
-            <div className="d-inline h-100 fs-5">₹{finalPrice}/-</div>
+
             <hr></hr>
-            <button className="btn btn-success justify-center ms-2" onClick={handleAddToCart}>
+            <button className="btn btn-success justify-center ms-2" id='AddToCart' onClick={handleAddToCart}>
               Add to Cart
             </button>
           </div>
